@@ -22,7 +22,7 @@ function App() {
       </Routes>
     </BrowserRouter>
     <footer>
-      <h1>Ⓒ 2022 #VANLIFE</h1>
+      <h1>Ⓒ 2024 #VANLIFE</h1>
     </footer> 
     </>
   );
