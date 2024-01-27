@@ -31,6 +31,9 @@ a {
 a:visited {
   color: none;
 }
+.underline {
+  text-decoration: underline;
+}
 
 
 /* Home Page */
@@ -42,9 +45,13 @@ a:visited {
   margin-right: auto;
 }
 .about-link,
-.vans-link {
+.vans-link,
+.host-link,
+.income-link,
+.reviews-link {
   margin-left: 3em;
 }
+
 .home-page {
     background-image: url("./images/home-background.png");
     background-position: center;
@@ -128,11 +135,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:60vh;
+  max-height:100%;
+  max-width:100%;
   margin-bottom: 50px;
 }
 .about-page-text h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 .about-page-text p {
   font-weight: 500;
@@ -257,6 +265,7 @@ footer {
   display: flex;
   gap: 4%;
 }
+
 .filter-simple,
 .filter-luxury,
 .filter-rugged {
@@ -307,8 +316,45 @@ footer {
 .van-details {
   margin: auto 0;
 }
-.vab-info p {
+.van-info p {
   font-weight: 500;
+}
+.inline-info h2,p {
+  display: inline;
+  font-size: 1.5rem;
+}
+.inline-info {
+  padding-bottom: 2em;
+}
+.inline-info p {
+  font-weight: 500;
+}
+.pricing h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.pricing {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.price-span {
+  font-size: 1rem;
+  color: #4D4D4D;
+  font-weight: 500;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-image {
+  width: 15%;
+  height: 15%;
+  object-fit: cover;
+  margin: 2em;
+  border-radius: 5px;
 }
 .van-details-container button {
   color: white;
@@ -343,28 +389,264 @@ footer {
   -webkit-transform: rotate(135deg);
 }
 
-
-
-
-/* Media Queries */
-@media (max-width:480px) {
+.host-navbar {
+  display: flex;
+  margin-block: 4em;
+}
+.hamburger {
+  display: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+}
+#openHam,
+#closeHam {
+  color: black;
+  font-size: 2rem;
+}
+.vans-list-text-title {
+  font-size: 1.5rem;
+}
+@media screen and (max-width:768px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .hamburger #closeHam {
+    display: none;
+  }
+  .navigation-items {
+    display: none;
+    flex-direction: column;
+  }
+  .host-navbar {
+    flex-direction: column;
+  }
   .vans-grid{
     grid-template-columns: 1fr;
   }
+  .host-van-navbar {
+    flex-direction: column;
+  }
+
   nav.nav-bar{
     flex-direction: column;
     
   }
+  
+  
   a {
     padding-block: 0.5em;
   }
-  .about-link,
-  .vans-link,
-  .home-link {
-    margin: auto;
+  body {
+    font-size: 10px;
   }
   
+  .about-link,
+  .vans-link,
+  .home-link,
+  .host-link,
+  .income-link,
+  .reviews-link,
+  .dashboard-link
+   {
+    margin: auto;
+  }
+  .single-van-details {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .single-van-details img {
+    min-width: 150px;
+    min-height: 150px;
+  }
+
 }
+/* Dashboard */
+.total-income .total-income-text {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.total-income {
+  border-radius: 5px;
+  background: #FFEAD0;
+}
+.total-income .details {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.highlighted {
+  
+  font-weight: 700;
+}
+.details > .income-description {
+  color: #4D4D4D;
+}
+.black {
+  color: #161616;
+}
+
+.review-score {
+  background: #FFDDB2;
+}
+.review-score-text {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.review-score-text > .main {
+  display: flex;
+  align-items: center;
+  margin-block: 1em;
+}
+
+.review-score-text > .main h1 {
+  margin-right: 1em;
+}
+.review-score-text h1,p {
+  margin: 0;
+}
+
+.five-pointed-star + h1 span {
+  color: #4D4D4D;
+  font-weight: 500;
+}
+/* Vans List */
+.vans-list {
+  background: #FFF7ED;
+}
+.vans-list-text {
+  width: 90%;
+  margin: 1em auto;
+  color: #161616;
+}
+.vans-list-text h1 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  
+}
+.vans-list-text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bold {
+  font-weight: 700;
+}
+.vans-single-item {
+  display: flex;
+  background-color: white;
+  margin: 1em auto;
+  border-radius: 5px;
+  align-items: center;
+}
+.vans-single-item > img {
+  border-radius: 5px;
+  width: 20%;
+  height: 20%;
+  margin: 1em;
+}
+.vans-list-text-price {
+  color: #4D4D4D;
+}
+.edit-text {
+  padding-right: 1.5em;
+}
+.vans-list-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.active-link {
+  text-decoration : underline;
+  font-weight : bold;
+  color : #161616;
+}
+/* Star */
+.five-pointed-star {
+  --star-color:#FF8C38;
+  margin:1em auto;
+  font-size:1em;
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(35deg);
+  margin-right: 0.5em;
+ }
+ .five-pointed-star:before {
+  border-bottom: 0.8em solid var(--star-color);
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -0.45em;
+  left: -0.65em;
+  display: block;
+  content:"";
+  transform: rotate(-35deg);
+ }
+ .five-pointed-star:after {
+  position: absolute;
+  display: block;
+  top: 0.03em;
+  left: -1.05em;
+  width: 0;
+  height: 0;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(-70deg);
+  content:"";
+ }
+
+ /* Host Vans Page */
+ .single-van-details {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  
+  
+ }
+ .van-details-name-type {
+  margin-block: 2em;
+ }
+.white-background {
+  background-color: white;
+}
+.margin {
+  margin: 2em;
+}
+ .single-van-details img {
+  height: 20%;
+  width: 20%;
+  border-radius: 5px;
+  
+ }
+ .host-van-navbar a {
+  color: #4D4D4D;
+  font-weight: 500;
+ }
+ .host-van-navbar{
+  display: flex;
+  gap: 4em;
+ }
+
+/* Media Queries */
+
 @media (max-width : 1762px) {
   .van-details-container {
     flex-direction: column;
@@ -372,10 +654,27 @@ footer {
 }
 
 @media(hover:hover){
+  .host-link:hover,
+  .vans-link:hover,
+  .about-link:hover,
+  .dashboard-link:hover,
+  .income-link:hover,
+  .reviews-link:hover,
+  .details-link:hover,
+  .pricing-link:hover,
+  .photos-link:hover {
+    color: #161616;
+    font-weight: bold;
+  }
   a:hover {
     text-decoration: underline;
   }
   .link-to-van:hover{
     text-decoration: none;
   }
+  .van-list-link:hover {
+    text-decoration: none;
+    
+  }
+  
 }

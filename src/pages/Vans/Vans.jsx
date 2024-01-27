@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card"
+import Card from "../../components/Card"
 import {Link} from "react-router-dom"
 export default function Vans() {
     const [vans,setVans] = React.useState([])
