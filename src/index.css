@@ -424,6 +424,7 @@ footer {
 .total-income .details {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: 500;
 }
 .highlighted {
@@ -677,14 +678,29 @@ footer {
     justify-content: center;
   }
   .single-van-details img {
-    min-width: 150px;
-    min-height: 150px;
+    min-width: 200px;
+    min-height: 200px;
   }
   .bold {
     font-weight: 500;
     font-size: 1.25rem;
   }
+  .inline-info h2,p {
+    font-size: 1.25rem;
+  }
+  .van-details-name-type {
+    margin: 0;
+    width: 200px;
+
+  }
   .highlighted {
     font-weight: 500;
   }
+  .edit-text {
+    padding-right: 1em;
+}
+.gallery-image{
+  width: 150px;
+  height: 150px;
+}
 }
