@@ -407,62 +407,7 @@ footer {
 .vans-list-text-title {
   font-size: 1.5rem;
 }
-@media screen and (max-width:768px) {
-  .hamburger {
-    display: flex;
-    cursor: pointer;
-  }
-  .hamburger #closeHam {
-    display: none;
-  }
-  .navigation-items {
-    display: none;
-    flex-direction: column;
-  }
-  .host-navbar {
-    flex-direction: column;
-  }
-  .vans-grid{
-    grid-template-columns: 1fr;
-  }
-  .host-van-navbar {
-    flex-direction: column;
-  }
 
-  nav.nav-bar{
-    flex-direction: column;
-    
-  }
-  
-  
-  a {
-    padding-block: 0.5em;
-  }
-  body {
-    font-size: 10px;
-  }
-  
-  .about-link,
-  .vans-link,
-  .home-link,
-  .host-link,
-  .income-link,
-  .reviews-link,
-  .dashboard-link
-   {
-    margin: auto;
-  }
-  .single-van-details {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .single-van-details img {
-    min-width: 150px;
-    min-height: 150px;
-  }
-
-}
 /* Dashboard */
 .total-income .total-income-text {
   width: 90%;
@@ -539,6 +484,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.vans-list-text-header h1{
+  margin: 0;
 }
 .bold {
   font-weight: 700;
@@ -677,4 +625,66 @@ footer {
     
   }
   
+}
+@media screen and (max-width:768px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .hamburger #closeHam {
+    display: none;
+  }
+  .navigation-items {
+    display: none;
+    flex-direction: column;
+  }
+  .host-navbar {
+    flex-direction: column;
+  }
+  .vans-grid{
+    grid-template-columns: 1fr;
+  }
+  .host-van-navbar {
+    flex-direction: column;
+  }
+
+  nav.nav-bar{
+    flex-direction: column;
+    
+  }
+  
+  
+  a {
+    padding-block: 0.5em;
+  }
+  body {
+    font-size: 10px;
+  }
+
+  .about-link,
+  .vans-link,
+  .home-link,
+  .host-link,
+  .income-link,
+  .reviews-link,
+  .dashboard-link
+   {
+    margin: auto;
+  }
+  .single-van-details {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .single-van-details img {
+    min-width: 150px;
+    min-height: 150px;
+  }
+  .bold {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  .highlighted {
+    font-weight: 500;
+  }
 }
