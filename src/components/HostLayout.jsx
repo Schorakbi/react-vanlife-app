@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Outlet, NavLink } from "react-router-dom";
-
-export default function Host() {
+export default function HostLayout() {
   const style = {
     textDecoration : "underline",
     fontWeight : "bold",
@@ -53,7 +52,7 @@ export default function Host() {
         </div>
         
       </nav>
-      <Outlet />
+      <Outlet/>
     </>
   );
 }

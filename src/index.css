@@ -332,6 +332,7 @@ h3 {
 .inline-info p {
   font-weight: 500;
 }
+
 .pricing h1 {
   font-size: 2rem;
   font-weight: 500;
@@ -595,6 +596,7 @@ h3 {
  .host-van-navbar{
   display: flex;
   gap: 4em;
+  
  }
 
 /* Media Queries */
@@ -649,7 +651,9 @@ h3 {
     grid-template-columns: 1fr;
   }
   .host-van-navbar {
-    flex-direction: column;
+    gap: 2em;
+    width: 90%;
+    margin-inline: auto;
   }
 
   nav.nav-bar{
@@ -681,8 +685,8 @@ h3 {
     justify-content: center;
   }
   .single-van-details img {
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 90%;
+    min-height: 90%;
   }
   .bold {
     font-weight: 500;
@@ -693,7 +697,7 @@ h3 {
   }
   .van-details-name-type {
     margin: 0;
-    width: 200px;
+    width: 90%;
 
   }
   .highlighted {

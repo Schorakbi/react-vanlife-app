@@ -1,16 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-export default function HostVanDetails() {
-  const { id } = useParams()
-  const [currentVan, setCurrentVan] = React.useState(null)
+import { useOutletContext } from "react-router-dom";
 
-  React.useEffect(() => {
-      fetch(`/api/host/vans/${id}`)
-          .then(res => res.json())
-          .then(data => setCurrentVan(data.vans))
-  }, [id])
+export default function HostVanDetails() {
+    const { currentVan } = useOutletContext();
     return(
-      currentVan ? (
     <div className="margin">
         <div className="inline-info">
             <h2>Name : </h2>
@@ -32,6 +25,6 @@ export default function HostVanDetails() {
     
     
     
-    ) : <div className="margin"><h2>Loading ...</h2></div>
+
     )
 }
