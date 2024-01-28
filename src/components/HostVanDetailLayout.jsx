@@ -20,7 +20,7 @@ export default function HostVanDetailLayout() {
             <Link to=".." relative="path" className="back-to-all-vans"><i className="arrow left"></i>Back to all vans</Link>
             {currentVan ? <div className="white-background">
                 <div className="single-van-details margin-block">
-                <img src={currentVan.imageUrl} alt={`of ${currentVan.name}`} className="single-van-details-image margin"/>
+                <img src={currentVan.imageUrl} alt={`of ${currentVan.name}`} className="single-van-details-image margin-block"/>
                 <div className="van-details-name-type">
                   <i className={`van-type ${currentVan.type} selected`}>{currentVan.type && currentVan.type[0].toUpperCase() + currentVan.type.slice(1)}</i>
                   <h1 className="van-name">{currentVan.name}</h1>

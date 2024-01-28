@@ -4,7 +4,7 @@ import { useOutletContext } from "react-router-dom";
 export default function HostVanDetails() {
     const { currentVan } = useOutletContext();
     return(
-    <div className="margin">
+    <div className="host-van-details-container margin-block-2">
         <div className="inline-info">
             <h2>Name : </h2>
             <p>{currentVan.name}</p>
