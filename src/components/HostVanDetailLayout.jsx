@@ -23,7 +23,7 @@ export default function SingleVanDetailsLayout() {
       }, [params]);
     return(
         <div className="container">
-            <Link to="/host/vans" className="back-to-all-vans"><i className="arrow left"></i>Back to all vans</Link>
+            <Link to=".." relative="path" className="back-to-all-vans"><i className="arrow left"></i>Back to all vans</Link>
             {van ? <div className="white-background">
                 <div className="single-van-details margin-block">
                 <img src={van.imageUrl} alt={`of ${van.name}`} className="single-van-details-image margin"/>

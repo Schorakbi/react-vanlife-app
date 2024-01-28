@@ -1,5 +1,5 @@
 import React from "react";
-import VansList from "./Vans/VansList";
+import HostVansList from "./Vans/HostVansList";
 
 export default function Dashboard() {
     return(
@@ -31,7 +31,7 @@ export default function Dashboard() {
                         <h1>Your listed vans</h1>
                         <p className="bold">View all</p>
                     </div>
-                    <VansList
+                    <HostVansList
                         condition = {true} 
                     />
                 </div>

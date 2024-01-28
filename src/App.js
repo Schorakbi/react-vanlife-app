@@ -7,9 +7,9 @@ import VanDetails from "./pages/Vans/VanDetails";
 import Layout from "./components/Layout";
 import Host from "./components/HostLayout";
 import "./App.css";
-import VansList from "./pages/Host/Vans/VansList";
+import HostVansList from "./pages/Host/Vans/HostVansList";
 import Pricing from "./pages/Host/Vans/Pricing";
-import HostVanDetail from "./pages/Host/Vans/HostVanDetail";
+import HostVanDetails from "./pages/Host/Vans/HostVanDetails";
 import Photos from "./pages/Host/Vans/Photos";
 import HostVanDetailLayout from "./components/HostVanDetailLayout";
 import Reviews from "./pages/Host/Reviews";
@@ -27,10 +27,10 @@ function App() {
           <Route path="vans/:id" element={<VanDetails />} />
           <Route path="host" element={<Host />}>
             <Route path="" element={<Dashboard />} />
-            <Route path="vans" element={<VansList />} />
+            <Route path="vans" element={<HostVansList />} />
 
             <Route path="vans/:id" element={<HostVanDetailLayout />}>
-              <Route index element={<HostVanDetail />} />
+              <Route index element={<HostVanDetails />} />
               <Route path="pricing" element={<Pricing />} />
               <Route path="photos" element={<Photos />} />
             </Route>

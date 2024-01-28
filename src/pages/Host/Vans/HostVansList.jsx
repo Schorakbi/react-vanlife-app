@@ -5,16 +5,12 @@ import { NavLink } from "react-router-dom";
 export default function VansList(props) {
     const [vans,setVans] = React.useState([])
     React.useEffect(() => {
-        fetch("/api/vans")
-        .then(response => response.json())
-        .then(data =>{ 
-            setVans(data.vans)
-    })
-    },[])
-    const vansList = vans.filter((van,index) => {
-        return index === 0 || index === 1 || index === vans.length-1
-    })
-    const vansElements = vansList.map(van => {
+        fetch("/api/host/vans")
+            .then(res => res.json())
+            .then(data => setVans(data.vans))
+    }, [])
+    
+    const vansElements = vans.map(van => {
         return(
             <div key={van.id}>
                 

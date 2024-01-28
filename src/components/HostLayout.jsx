@@ -38,7 +38,7 @@ export default function Host() {
         </div>
         <div className="navigation-items" id="navigation-items">
             
-            <NavLink end to="/host" className="dashboard-link" style={({isActive}) => isActive ? style : null}>
+            <NavLink end to="." className="dashboard-link" style={({isActive}) => isActive ? style : null}>
             Dashboard
             </NavLink>
             <NavLink to="income" className="income-link" style={({isActive}) => isActive ? style : null}>

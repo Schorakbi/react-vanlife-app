@@ -313,6 +313,9 @@ footer {
 .van-info .van-price span  {
   font-weight: 500;
 }
+h3 {
+  font-size: 1.5rem;
+}
 .van-details {
   margin: auto 0;
 }
