@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import PageNotFound from "./pages/PageNotFound";
 import Vans from "./pages/Vans/Vans";
 import VanDetails from "./pages/Vans/VanDetails";
 import Layout from "./components/Layout";
@@ -38,6 +39,7 @@ function App() {
             <Route path="reviews" element={<Reviews />} />
             <Route path="income" element={<Income />} />
           </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

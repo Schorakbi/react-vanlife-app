@@ -250,8 +250,8 @@ footer {
 .vans-grid {
   margin-block:4em;
   display: grid;
-  justify-content: start;
-  grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+  align-items: stretch; /* This is incredible !! */
+  grid-template-columns: repeat(auto-fill,minmax(320px, 1fr));
   grid-gap: 50px;
 }
 .vans-title {
@@ -271,16 +271,28 @@ footer {
 .filter-rugged {
   
   background: #FFEAD0;
-  width: 180px;
+  width: 200px;
   height: 80px;
   border: none;
   color: #4D4D4D;
   border-radius: 5px;
   font-size: 1.25rem;
-  padding-block: 1em;
-  padding-inline: 0.5em;
+  line-height: 200%;
   cursor: pointer;
   margin-bottom: 1.25em;
+}
+.filter-simple.selected {
+  background-color: #E17654;
+  color: #FFEAD0;
+
+}
+.filter-rugged.selected {
+  background-color: #115E59;
+  color: #FFEAD0;
+}
+.filter-luxury.selected {
+  background-color: #161616;
+  color: #FFEAD0;
 }
 .clear-filters{
   background: none;
@@ -584,6 +596,7 @@ h3 {
  }
 .white-background {
   background-color: white;
+  margin-bottom: 5em;
 }
 .margin {
   margin: 2em;
@@ -611,6 +624,27 @@ h3 {
 .host-van-details-container {
   width: 90%;
   margin-inline: auto;
+}
+/* Page not found */
+.page-not-found {
+  width: 90%;
+  margin: 0 auto;
+}
+.page-not-found h1 {
+  margin-block: 2em;
+  font-size: 2.5rem;
+}
+.page-not-found button {
+  height: 80px;
+  color: white;
+  background-color: #161616;
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20%;
+  cursor: pointer;
 }
 /* Media Queries */
 
@@ -643,6 +677,18 @@ h3 {
     text-decoration: none;
     
   }
+  .filter-simple:hover {
+    background-color: #E17654;
+    color: #FFEAD0;
+  }
+  .filter-rugged:hover {
+    background-color: #115E59;
+    color: #FFEAD0;
+  }
+  .filter-luxury:hover {
+    background-color: #161616;
+    color: #FFEAD0;
+  }
   
 }
 @media screen and (max-width:768px) {
@@ -659,9 +705,6 @@ h3 {
   }
   .host-navbar {
     flex-direction: column;
-  }
-  .vans-grid{
-    grid-template-columns: 1fr;
   }
   .host-van-navbar {
     gap: 2em;
