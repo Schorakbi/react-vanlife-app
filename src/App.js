@@ -21,6 +21,8 @@ import PageNotFound from "./pages/PageNotFound";
 
 import { requireAuth } from "./utils/RequireAuth";
 
+import "./server"
+
 const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path="/" element={<Layout />}>
