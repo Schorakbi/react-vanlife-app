@@ -1,24 +1,26 @@
 import React from "react";
-import { Outlet, useParams } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 import { Link,NavLink } from "react-router-dom";
+import { getHostVans } from "../api";
+import { requireAuth } from "../utils/RequireAuth";
+
+export async function loader({ params, request }) {
+    await requireAuth(request)
+    return getHostVans(params.id)
+}
+
 export default function HostVanDetailLayout() {
     const style = {
         textDecoration : "underline",
         fontWeight : "bold",
         color : "#161616"
     }
-    const { id } = useParams()
-    const [currentVan, setCurrentVan] = React.useState(null)
-  
-    React.useEffect(() => {
-        fetch(`/api/host/vans/${id}`)
-            .then(res => res.json())
-            .then(data => setCurrentVan(data.vans))
-    }, [id])
+    const currentVan = useLoaderData();
+    
     return(
         <div className="container">
             <Link to=".." relative="path" className="back-to-all-vans"><i className="arrow left"></i>Back to all vans</Link>
-            {currentVan ? <div className="white-background">
+            <div className="white-background">
                 <div className="single-van-details margin-block">
                 <img src={currentVan.imageUrl} alt={`of ${currentVan.name}`} className="single-van-details-image margin-block"/>
                 <div className="van-details-name-type">
@@ -39,9 +41,9 @@ export default function HostVanDetailLayout() {
                 Photos
                 </NavLink>
             
+            </div>
+            <Outlet context={{ currentVan }}/>
         </div>
-        <Outlet context={{ currentVan }}/>
-            </div> : <h2>Loading ...</h2>}
         </div>
     )
 }

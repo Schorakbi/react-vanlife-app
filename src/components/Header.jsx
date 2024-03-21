@@ -13,6 +13,10 @@ export default function Header() {
           <NavLink to="/vans" className={({isActive}) => isActive ? "vans-link active-link" : "vans-link"}>
              Vans
           </NavLink>
+          <NavLink to="login" className="user-link">
+            <i className="fa-regular fa-circle-user"></i>
+          </NavLink>
+          
         </nav>
     );
 }
