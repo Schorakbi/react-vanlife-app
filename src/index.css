@@ -764,6 +764,123 @@ h3 {
   background-color: #aaaaaa;
   cursor: not-allowed;
 }
+
+/* Reviews Page */
+.reviews-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.gray-text {
+  color: #4D4D4D;
+  padding-left: 1em;
+  font-weight: normal;
+}
+img.graph {
+  margin-block: 1em;
+  width: 100%;
+  max-width: 1200px;
+}
+.reviews-container .review-star {
+  color: #ff8c38;
+  margin-right: 5px;
+}
+.reviews-container .review {
+  margin-block: 25px;
+  
+}
+
+.reviews-container .review .info {
+  display: flex;
+  margin-block: 1em;
+}
+
+.reviews-container .review .name {
+  color: #161616;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.reviews-container .review .date {
+  color: #8c8c8c;
+}
+
+.reviews-container hr {
+  background-color: #c7c7c7;
+  height: 1px;
+  border: 0;
+}
+/* Income page */
+.host-income {
+  padding-inline: 26px;
+  color: #161616;
+  width: 90%;
+  margin: 0 auto;
+}
+.host-income > h1 {
+  
+  font-size: 2rem;
+
+}
+
+.host-income > p {
+  color: #4d4d4d;
+}
+
+.host-income > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income > h2 {
+  font-size: 4rem;
+  color: #161616;
+  font-weight: 900;
+}
+
+.host-income img.graph {
+  width: 100%;
+  max-width: 750px;
+}
+.host-income .info-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.host-income .info-header > p {
+  color: #4d4d4d;
+}
+
+.host-income .info-header > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income .info-header > h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 60px;
+}
+
+.host-income .transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 31px;
+  padding: 35px 29px;
+  border-radius: 6px;
+}
+.host-income .transaction > h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.host-income .transaction > p {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4d4d4d;
+}
 /* Media Queries */
 
 @media (max-width : 1762px) {

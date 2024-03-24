@@ -30,12 +30,12 @@ const router = createBrowserRouter(
     <Route path="about" element={<About />} />
     <Route path="login" element={<Login />} loader={loginLoader} action={loginAction} />
     <Route path="vans" element={<Vans />} loader={vansLoader} errorElement={<Error />} />
-    <Route path="vans/:id" element={<VanDetails />} loader={vanDetailsLoader} />
+    <Route path="vans/:id" element={<VanDetails />} loader={vanDetailsLoader} errorElement={<Error />} />
     <Route path="host" element={<Host />}>
       <Route index element={<Dashboard />} loader={hostVansListLoader} />
-      <Route path="vans" element={<HostVansList />} loader={hostVansListLoader} />
+      <Route path="vans" element={<HostVansList />} loader={hostVansListLoader} errorElement={<Error />} />
 
-      <Route path="vans/:id" element={<HostVanDetailLayout />} loader={hostVanDetailsLoader}>
+      <Route path="vans/:id" element={<HostVanDetailLayout />} loader={hostVanDetailsLoader} errorElement={<Error />}>
         <Route index element={<HostVanDetails />} loader={async ({ request }) => await requireAuth(request)} />
         <Route path="pricing" element={<Pricing />} loader={async ({ request }) => await requireAuth(request)} />
         <Route path="photos" element={<Photos />} loader={async ({ request }) => await requireAuth(request)} />
